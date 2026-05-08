@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head><base href="./">
   <meta charset="UTF-8">
@@ -17,7 +17,6 @@
   <h1>Beauty Blog</h1>
   <p>Tips, Trends & Beauty Advice</p>
 </header>
-
 <!-- NAVIGATION -->
 <nav>
   <a href="index.html">Home</a>
@@ -31,8 +30,22 @@
 
 <!-- BLOG SECTION -->
 <section class="blog-section">
-  <h2>Latest Beauty Articles & Tips</h2>
-  <p style="max-width: 700px; margin: 20px auto 50px; font-size: 1.1rem; text-align: center;">Discover expert beauty tips, skincare routines, makeup advice, and the latest trends to help you look and feel your best.</p>
+  <div class="blog-hero-banner">
+    <div class="blog-hero-copy">
+      <span class="eyebrow">Beauty Journal</span>
+      <h2>Expert Beauty Advice for Every Occasion</h2>
+      <p>Read premium salon stories, skincare rituals, bridal makeup ideas and hair care secrets curated for modern clients who want confidence, grace, and glow.</p>
+    </div>
+    <div class="blog-hero-feature">
+      <img src="images/Bridal Makeup.jpg" alt="Featured beauty story" class="blog-hero-image">
+      <div class="blog-feature-text">
+        <div class="blog-date">Featured</div>
+        <h3>Top Bridal Makeup Trends for 2026</h3>
+        <p>From pearl-glow skin to soft statement eyes, discover the bridal looks that are creating unforgettable wedding day beauty moments.</p>
+        <a href="#" class="read-more" data-article="2" onclick="openBlogModal(event)">Read the feature →</a>
+      </div>
+    </div>
+  </div>
 
   <div class="blog-grid">
     <!-- BLOG POST 1 -->
@@ -138,7 +151,7 @@
   <div style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 237, 74, 0.1)); padding: 40px; border-radius: 15px; margin-top: 60px; border: 1px solid rgba(255, 215, 0, 0.2); text-align: center;">
     <h3 style="color: #ffd700;">Want Expert Beauty Advice?</h3>
     <p style="margin: 15px 0; color: #c0c0c0;">Book a consultation with our beauty experts and get personalized recommendations tailored to your unique needs and goals.</p>
-    <a href="contact.html" class="btn">Book a Consultation</a>
+    <a href="contact.html#booking" class="btn">Book a Consultation</a>
   </div>
 </section>
 
@@ -158,49 +171,81 @@
       title: '10-Step Skincare Routine for Glowing Skin',
       date: 'May 2026',
       image: 'images/Glowing Facial.jpg',
-      text: 'Discover the ultimate skincare routine that will transform your skin. Learn the proper order of applying products and why each step matters for achieving that radiant, glowing complexion you\'ve always wanted. Start with cleansing, exfoliation, toning, hydration, and protection to build a complete glow-ready routine.'
+      paragraphs: [
+        'Discover the ultimate skincare routine that will transform your skin. Learn the proper order of applying products and why each step matters for achieving that radiant, glowing complexion you\'ve always wanted.',
+        'Begin with a gentle cleanser to remove impurities, then follow with exfoliation to smooth texture and clear pores. A nourishing serum adds nourishment while protecting your skin from environmental stress.',
+        'Finish every routine with moisturizer and SPF to lock in hydration and shield your skin from UV damage. Consistency is the secret to a healthy, luminous complexion.'
+      ]
     },
     2: {
       title: 'Bridal Makeup Trends for 2026',
       date: 'May 2026',
       image: 'images/Bridal Makeup.jpg',
-      text: 'Explore the latest bridal makeup trends this season. From soft, romantic looks to bold, dramatic styles, find out what\'s hot in bridal beauty and how to choose the perfect look that complements your wedding dress and personality.'
+      paragraphs: [
+        'Explore the latest bridal makeup trends this season. From soft, romantic looks to bold, dramatic styles, discover what\'s hot in bridal beauty and how to choose the perfect look that complements your wedding dress and personality.',
+        'Minimal shimmer, glowing skin, and clean brows are dominating the runway. Brides are also choosing warm neutral tones with delicate eyeliner that enhances the eyes without overpowering the face.',
+        'For a modern bridal vibe, balance timeless elegance with subtle drama. The right professional artist will make sure your look stays flawless throughout the entire celebration.'
+      ]
     },
     3: {
       title: 'Hair Care Tips: How to Maintain Healthy Hair',
       date: 'April 2026',
       image: 'images/hair styling.jpg',
-      text: 'Get professional hair care tips to maintain healthy, shiny, and strong hair. Learn about proper washing techniques, conditioning, deep treatments, and lifestyle habits that contribute to beautiful, vibrant hair.'
+      paragraphs: [
+        'Get professional hair care tips to maintain healthy, shiny, and strong hair. Learn about proper washing techniques, conditioning, deep treatments, and lifestyle habits that contribute to beautiful, vibrant hair.',
+        'Choose sulfate-free shampoos and lightweight conditioners to preserve moisture without weighing hair down. Regular trims and nourishing masks keep split ends at bay and boost shine.',
+        'Avoid daily heat styling when possible, and protect strands with heat protectant sprays. A balanced diet, hydration, and salon gloss treatments also support long-lasting hair health.'
+      ]
     },
     4: {
       title: 'Party Makeup Guide: Step-by-Step Tutorial',
       date: 'April 2026',
       image: 'images/Party Makeup 2.jpg',
-      text: 'Master the art of party makeup with our comprehensive step-by-step guide. Learn how to create stunning, long-lasting makeup that looks perfect in photos and keeps its freshness throughout the entire celebration.'
+      paragraphs: [
+        'Master the art of party makeup with this step-by-step guide. Learn how to create stunning, long-lasting looks that are camera-ready and keep their freshness throughout every celebration.',
+        'Start with a clean, hydrated base and blend a medium-coverage foundation evenly. Add contour and blush to shape your face, then define eyes with shadow, liner, and fluttery lashes.',
+        'Seal the look with a setting spray and choose lips that complement the overall tone. The right balance of glow, depth, and color makes you stand out beautifully after sunset.'
+      ]
     },
     5: {
       title: 'Benefits of Regular Facials for Your Skin',
       date: 'March 2026',
       image: 'images/facial.jpg',
-      text: 'Understand why regular facials are essential for skin health. Learn about different types of facials, their specific benefits, and how often you should get them to maintain a clear, youthful, and healthy complexion.'
+      paragraphs: [
+        'Understand why regular facials are essential for skin health. Learn about different types of facials, their specific benefits, and how often you should get them to maintain a clear, youthful, and healthy complexion.',
+        'Professional facials deeply cleanse pores, remove dead skin cells, and improve circulation. Each treatment is tailored to your skin concerns, whether it is hydration, anti-aging, or acne control.',
+        'By visiting the salon regularly, you keep your skin balanced, refreshed, and radiant. Facials also help maximize the effectiveness of your home skincare routine.'
+      ]
     },
     6: {
       title: 'Acne-Prone Skin: Solutions & Prevention Tips',
       date: 'March 2026',
       image: 'images/Facial 1.jpg',
-      text: 'Get expert advice on managing acne-prone skin. Discover proven solutions, prevention strategies, skincare products to avoid, and when to seek professional help for stubborn acne issues and skin problems.'
+      paragraphs: [
+        'Get expert advice on managing acne-prone skin. Discover proven solutions, prevention strategies, skincare products to avoid, and when to seek professional help for stubborn acne issues and skin problems.',
+        'Gentle cleansing twice a day and non-comedogenic moisturizers are the foundation of healthy skin. Avoid harsh scrubs and overly drying products, which can trigger irritation and breakouts.',
+        'Regular professional skin assessments and targeted facials help reduce acne while maintaining the skin\'s natural barrier. A calm, consistent routine brings clearer, more confident results.'
+      ]
     },
     7: {
       title: 'Makeup for Different Face Shapes',
       date: 'February 2026',
       image: 'images/Bridal Makeup 3.jpg',
-      text: 'Learn how to enhance your natural beauty by using makeup techniques tailored to your face shape. Discover tips for round, square, oval, and heart-shaped faces to create balanced, flattering makeup looks.'
+      paragraphs: [
+        'Learn how to enhance your natural beauty by using makeup techniques tailored to your face shape. Discover tips for round, square, oval, and heart-shaped faces to create balanced, flattering looks.',
+        'For round faces, add subtle contour to define cheekbones and elongate the face. Square shapes benefit from softer edges and rounded blush placement to soften angles.',
+        'Oval faces are versatile, with nearly every style flattering the natural symmetry. Adjust eyebrow shape, highlights, and blush placement for the most harmonious result.'
+      ]
     },
     8: {
       title: 'Color & Highlight Care: Keep Your Hair Radiant',
       date: 'February 2026',
       image: 'images/HIGHLIGHTS Hair.jpg',
-      text: 'Learn how to protect and maintain color-treated hair with expert tips on hydration, repair, and the best salon treatments for lasting shine and vibrancy.'
+      paragraphs: [
+        'Learn how to protect and maintain color-treated hair with expert tips on hydration, repair, and the best salon treatments for lasting shine and vibrancy.',
+        'Use color-safe shampoos and regular deep-conditioning masks to prevent fading and dryness. Cool rinses and UV protection help preserve brightness and prevent brassiness.',
+        'Visit your salon for root touch-ups and tone-refreshing gloss treatments that extend the life of your color. Proper care means your highlights stay luminous and salon-fresh longer.'
+      ]
     }
   };
 
@@ -214,7 +259,7 @@
     document.getElementById('modalDate').textContent = article.date;
     document.getElementById('modalImage').src = article.image;
     document.getElementById('modalImage').alt = article.title;
-    document.getElementById('modalText').textContent = article.text;
+    document.getElementById('modalText').innerHTML = article.paragraphs.map(paragraph => `<p>${paragraph}</p>`).join('');
     document.getElementById('blogModal').classList.add('active');
     document.body.style.overflow = 'hidden';
   }
