@@ -1,24 +1,21 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head><base href="./">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact The Glamour Beauty Salon - Get in touch for appointments and inquiries in Karachi, Pakistan.">
-  <meta name="author" content="The Glamour Beauty Salon">
-  <title>Contact Us - The Glamour Beauty Salon</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <title>Contact - The Glamour Beauty Salon</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <header class="hero">
-  <img src="images/logo.png.jpeg" class="logo" alt="The Glamour Beauty Salon Logo">
-  <h1>Contact Us</h1>
-  <p>Get In Touch With The Glamour Beauty Salon</p>
+  <h1>Book Your Appointment</h1>
+  <p>Reserve your beauty session with experts</p>
 </header>
 
-<!-- NAVIGATION -->
+<!-- NAV -->
 <nav>
   <a href="index.html">Home</a>
   <a href="services.html">Services</a>
@@ -29,85 +26,135 @@
   <a href="blog.html">Blog</a>
 </nav>
 
-<!-- CONTACT SECTION -->
-<section class="contact-section">
-  <h2>We'd Love To Hear From You!</h2>
-  <p style="max-width: 700px; margin: 20px auto 50px; font-size: 1.1rem;">Have questions about our services? Ready to book your appointment? Fill out the form below and we'll get back to you within 24 hours. You can also reach us directly through the contact information provided.</p>
+<!-- BOOKING FORM -->
+<section class="booking" id="booking">
 
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
-    <!-- CONTACT FORM -->
-    <form style="grid-column: 1 / -1;">
-      <div class="form-group">
-        <label for="name">Full Name *</label>
-        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
-      </div>
-      
-      <div class="form-group">
-        <label for="email">Email Address *</label>
-        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
-      </div>
-      
-      <div class="form-group">
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" placeholder="+92 XXX XXXXXXX">
-      </div>
-      
-      <div class="form-group">
-        <label for="service">Interested Service</label>
-        <input type="text" id="service" name="service" placeholder="e.g., Bridal Makeup">
-      </div>
-      
-      <div class="form-group">
-        <label for="message">Message *</label>
-        <textarea id="message" name="message" placeholder="Tell us about your requirements and preferred date..." required></textarea>
-      </div>
-      
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </div>
+  <h2>Book Your Appointment</h2>
 
-  <h2 style="margin-top: 60px;">Contact Information</h2>
-  <div class="contact-info">
-    <div class="contact-item">
-      <h3>📧 Email</h3>
-      <p><a href="mailto:glamourbeauty@gmail.com">glamourbeauty@gmail.com</a></p>
-      <p style="font-size: 0.9rem; color: #888;">Response time: Within 24 hours</p>
-    </div>
-    
-    <div class="contact-item">
-      <h3>📍 Location</h3>
-      <p>Karachi, Pakistan</p>
-      <p style="font-size: 0.9rem; color: #888;">Visit us at our luxury salon</p>
-    </div>
-    
-    <div class="contact-item">
-      <h3>⏰ Working Hours</h3>
-      <p>Monday - Sunday: 12:00 PM - 9:00 PM</p>
-    </div>
-  </div>
+  <form class="contact-form"
+    action="https://formsubmit.co/theglamourbeautysalonofficial@gmail.com"
+    method="POST">
 
-  <div style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 237, 74, 0.1)); padding: 40px; border-radius: 15px; margin-top: 60px; border: 1px solid rgba(255, 215, 0, 0.2); text-align: center;">
-    <h3 style="color: #ffd700;">Have a Quick Question?</h3>
-    <p style="margin: 15px 0; color: #c0c0c0;">Send us an email for quick answers about bookings and beauty services.</p>
-    <a href="mailto:glamourbeauty@gmail.com" class="btn" style="display: inline-block;">Email Us</a>
-  </div>
+    <!-- NAME -->
+    <input type="text" name="Name" placeholder="Full Name" required>
+
+    <!-- EMAIL -->
+    <input type="email" name="Email" placeholder="Email Address" required>
+
+    <!-- PHONE -->
+    <input type="tel" name="Phone" placeholder="Phone Number" required>
+
+    <!-- SERVICE -->
+    <select name="Service" id="serviceSelect" required>
+      <option value="">Select Service</option>
+      <option>Bridal Makeup</option>
+      <option>Party Makeup</option>
+      <option>Hair Styling</option>
+      <option>Facial</option>
+      <option value="other">Other</option>
+    </select>
+
+    <!-- CUSTOM SERVICE -->
+    <input type="text" id="customService" name="CustomService"
+      placeholder="Enter Service"
+      style="display:none; margin-top:10px;">
+
+    <!-- DATE -->
+    <label>Select Date</label>
+    <input type="date" id="dateSelect" name="Date" required>
+
+    <!-- DAY -->
+    <p id="dayName"></p>
+
+    <!-- SLOT -->
+    <label>Select Time Slot</label>
+    <select id="slotSelect" name="TimeSlot" required>
+      <option value="">Select Date First</option>
+    </select>
+
+    <p id="slotMessage"></p>
+
+    <!-- MESSAGE -->
+    <textarea name="Message" placeholder="Special Request (Optional)"></textarea>
+
+    <!-- FORM SETTINGS -->
+    <input type="hidden" name="_subject" value="New Salon Booking">
+    <input type="hidden" name="_captcha" value="false">
+
+    <!-- ✅ IMPORTANT REDIRECT -->
+    <input type="hidden" name="_next" value="https://glamour-beauty-salon-ebon.vercel.app/thanks.html">
+
+    <button type="submit">Book Appointment</button>
+
+  </form>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>&copy; 2026 The Glamour Beauty Salon | Karachi, Pakistan</p>
-  <div class="footer-social">
-    <a href="https://www.facebook.com/share/1CPtgfu52s/" title="Facebook">Facebook</a>
-    <a href="https://www.instagram.com/theglamourbeautysalon_official?igsh=c2xicDVqaHN4c2M3" title="Instagram">Instagram</a>
-    
-  </div>
+  <p>© 2026 The Glamour Beauty Salon | Karachi</p>
 </footer>
+
+<!-- SCRIPT -->
+<script>
+const dateSelect = document.getElementById("dateSelect");
+const slotSelect = document.getElementById("slotSelect");
+const dayName = document.getElementById("dayName");
+const slotMessage = document.getElementById("slotMessage");
+const serviceSelect = document.getElementById("serviceSelect");
+const customService = document.getElementById("customService");
+
+// schedule
+const schedule = {
+  Monday: ["11:00 AM", "12:00 PM", "2:00 PM", "5:00 PM"],
+  Tuesday: ["11:00 AM", "1:00 PM", "3:00 PM", "6:00 PM"],
+  Wednesday: ["12:00 PM", "2:00 PM", "5:00 PM"],
+  Thursday: ["11:00 AM", "2:00 PM", "6:00 PM"],
+  Friday: ["11:00 AM", "3:00 PM", "5:00 PM"],
+  Saturday: ["12:00 PM", "2:00 PM", "6:00 PM"],
+  Sunday: ["11:00 AM", "1:00 PM", "5:00 PM"]
+};
+
+// custom service
+serviceSelect.addEventListener("change", () => {
+  if (serviceSelect.value === "other") {
+    customService.style.display = "block";
+    customService.required = true;
+  } else {
+    customService.style.display = "none";
+    customService.required = false;
+  }
+});
+
+// date → slots
+dateSelect.addEventListener("change", () => {
+  const date = new Date(dateSelect.value);
+  const day = date.toLocaleDateString("en-US", { weekday: "long" });
+
+  dayName.innerText = "Selected Day: " + day;
+
+  slotSelect.innerHTML = "";
+
+  if (!schedule[day]) {
+    slotSelect.innerHTML = "<option>No slots available</option>";
+    return;
+  }
+
+  schedule[day].forEach(time => {
+    let opt = document.createElement("option");
+    opt.value = time;
+    opt.textContent = time + " — Available";
+    slotSelect.appendChild(opt);
+  });
+
+  slotMessage.innerText = "Choose a time slot";
+});
+
+// slot message
+slotSelect.addEventListener("change", () => {
+  slotMessage.innerText = "✔ Selected: " + slotSelect.value;
+  slotMessage.style.color = "lightgreen";
+});
+</script>
 
 </body>
 </html>
-
-
-
-
-
-
