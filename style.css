@@ -30,6 +30,7 @@ p {
   color: #d0d0d0;
 }
 
+/* 
 /* ============================================
    HERO SECTION
    ============================================ */
@@ -548,6 +549,80 @@ form button:hover {
 /* ============================================
    BLOG SECTION
    ============================================ */
+.blog-hero-banner {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 50px;
+  padding: 40px;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 215, 0, 0.12);
+  border-radius: 25px;
+}
+
+.blog-hero-copy {
+  max-width: 100%;
+}
+
+.blog-hero-copy .eyebrow {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: #ffd700;
+  margin-bottom: 18px;
+  font-size: 0.82rem;
+}
+
+.blog-hero-copy h2 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.05;
+}
+
+.blog-hero-copy p {
+  max-width: 620px;
+  color: #d4d4d4;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.blog-hero-feature {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 215, 0, 0.15);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.blog-hero-image {
+  width: 100%;
+  display: block;
+  height: 320px;
+  object-fit: cover;
+}
+
+.blog-feature-text {
+  padding: 30px;
+}
+
+.blog-feature-text .blog-date {
+  margin-bottom: 12px;
+}
+
+.blog-feature-text h3 {
+  color: #fff;
+  margin-bottom: 16px;
+  font-size: 1.75rem;
+}
+
+.blog-feature-text p {
+  color: #c0c0c0;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -689,6 +764,20 @@ form button:hover {
 
   .blog-modal-content h3 {
     font-size: 1.6rem;
+  }
+
+  .blog-hero-banner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 25px;
+  }
+
+  .blog-hero-image {
+    height: 260px;
+  }
+
+  .blog-hero-copy h2 {
+    font-size: 2.3rem;
   }
 }
 
@@ -919,6 +1008,15 @@ footer a:hover {
   section {
     padding: 60px 20px;
   }
+
+  .blog-hero-banner {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+
+  .blog-hero-image {
+    height: 280px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1043,5 +1141,183 @@ footer a:hover {
   
   .about-text p {
     text-align: left;
+  }
+}
+
+/* ============================================
+   BOOKING FORM STYLES
+   ============================================ */
+.booking {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.booking h2 {
+  color: #ffd700;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: #ffd700;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  outline: none;
+}
+
+.contact-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #ffd700, #c9a961);
+  border: none;
+  border-radius: 8px;
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.contact-form button:hover {
+  background: linear-gradient(135deg, #c9a961, #ffd700);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+.slot-info{
+  margin-bottom:10px;
+  font-size:14px;
+}
+.available{
+  color:green;
+  margin-right:15px;
+}
+.full{
+  color:red;
+}
+
+#slotSelect{
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  margin-bottom:10px;
+}
+
+#slotMessage{
+  font-weight:bold;
+  margin-bottom:20px;
+}
+
+.form-warning {
+  background: rgba(255, 215, 0, 0.12);
+  color: #fff;
+  border: 1px solid rgba(255, 215, 0, 0.5);
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.form-warning strong {
+  color: #ffd700;
+}
+
+/* ============================================
+   THANK YOU PAGE
+   ============================================ */
+
+.thank-you {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  animation: fadeIn 0.8s ease;
+}
+
+.thank-you h2 {
+  color: #ffd700;
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.thank-you h2::before {
+  display: none;
+}
+
+.thank-you h2::after {
+  margin: 15px auto 0;
+}
+
+.thank-you p {
+  color: #d0d0d0;
+  line-height: 1.8;
+}
+
+.thank-you ul {
+  list-style: none;
+  padding: 0;
+}
+
+.thank-you li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+.thank-you .btn {
+  margin-top: 25px;
+}
+
+.thank-you div {
+  animation: slideUp 0.8s ease;
+}
+
+@media (max-width: 768px) {
+  .thank-you h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .thank-you {
+    padding: 30px 15px;
+  }
+
+  .thank-you h2 {
+    font-size: 1.6rem;
   }
 }
